@@ -26,4 +26,3 @@ if (isset($_GET['id'])) {
     echo "ID tidak diberikan.";
     exit();
 }
-?>

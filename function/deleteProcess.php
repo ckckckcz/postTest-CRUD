@@ -26,4 +26,3 @@ if (isset($_POST['id'])) {
 } else {
     echo "ID tidak diberikan.";
 }
-?>

@@ -39,7 +39,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     <section class="bg-white dark:bg-gray-900">
         <div class="py-8 px-4 mx-auto max-w-screen-xl text-left lg:py-16">
             <h1
-                class="mb-2 text-3xl font-bold leading-none tracking-tight text-blue-600 md:text-4xl lg:text-5xl dark:text-white">
+                class="mb-2 text-3xl font-bold leading-none tracking-tight text-gray-900 md:text-4xl lg:text-5xl dark:text-white">
                 Rencanakan Hari Anda</h1>
             <p class="text-md font-normal text-gray-500 lg:text-lg dark:text-gray-400">Setiap tugas yang Anda tulis
                 adalah langkah menuju kesuksesan!</p>

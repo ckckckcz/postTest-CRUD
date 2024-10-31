@@ -1,5 +1,5 @@
 <?php
-include './function/createProcess.php';
+include '../function/createProcess.php';
 ?>
 
 <!DOCTYPE html>

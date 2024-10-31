@@ -29,7 +29,7 @@ if ($conn != false) {
             <p class="text-md font-normal text-gray-500 lg:text-lg dark:text-gray-400">Kami ada untuk membantu Anda
                 menjalani hari-hari yang lebih teratur dan bermakna.</p>
             <?php if ($isDbConnectionSuccess) { ?>
-                <a href="tambah_tugas.php">
+                <a href="pages/tambah_tugas.php">
                     <button type="button"
                         class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 me-2 mb-2 dark:bg-blue-600 dark:hover:bg-blue-700 focus:outline-none dark:focus:ring-blue-800 mt-10 flex gap-2">
                         <svg class="w-5 h-5 text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24"
@@ -83,7 +83,7 @@ if ($conn != false) {
                             <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">
                                 <?php echo htmlspecialchars($row['deskripsi']); ?>
                             </p>
-                            <a href="lihat_detail.php?id=<?php echo $row['id']; ?>"
+                            <a href="pages/lihat_detail.php?id=<?php echo $row['id']; ?>"
                                 class="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
                                 Lihat Tugas
                             </a>

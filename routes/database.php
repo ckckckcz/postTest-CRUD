@@ -1,6 +1,7 @@
 <?php
 
-$serverName = "RIOVALDOALFIYAN\MSQLRIO";
+// $serverName = "RIOVALDOALFIYAN\MSQLRIO";
+$serverName = "LAPTOP-V9Q55RPI";
 $connectionInfo = [
     "Database" => "crud"
 ];
@@ -8,9 +9,7 @@ $connectionInfo = [
 $conn = sqlsrv_connect($serverName, $connectionInfo);
 
 if ($conn) {
-    echo "Koneksi ke database berhasil! hore";
+    $isDbConnectionSuccess = true;
 } else {
-    echo "Koneksi ke database gagal: ";
-    die(print_r(sqlsrv_errors(), true));
+    $isDbConnectionSuccess = false;
 }
-?>

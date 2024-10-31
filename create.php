@@ -11,7 +11,9 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $stmt = sqlsrv_query($conn, $sql, $params);
 
     if ($stmt) {
-        echo "Data berhasil disimpan.";
+        // Jika berhasil, arahkan ke halaman index.php
+        header("Location: index.php");
+        exit();
     } else {
         echo "Terjadi kesalahan: " . print_r(sqlsrv_errors(), true);
     }
@@ -20,6 +22,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     sqlsrv_close($conn);
 }
 ?>
+
 
 
 <!DOCTYPE html>

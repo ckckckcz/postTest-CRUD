@@ -17,5 +17,6 @@ if (isset($_POST['id'])) {
         echo "<script>alert('$errors');</script>";
     }
 } else {
-    echo "ID tidak diberikan.";
+    header("Location: ../not_found_route.php");
+    exit();
 }

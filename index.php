@@ -1,5 +1,5 @@
 <?php
-include './routes/conn.php'; // Sertakan file koneksi
+include './routes/conn.php';
 ?>
 
 <!DOCTYPE html>
@@ -22,15 +22,17 @@ include './routes/conn.php'; // Sertakan file koneksi
           Produktif</span> !</h1>
       <p class="text-md font-normal text-gray-500 lg:text-lg dark:text-gray-400">Kami ada untuk membantu Anda menjalani
         hari-hari yang lebih teratur dan bermakna.</p>
-      <button type="button"
-        class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 me-2 mb-2 dark:bg-blue-600 dark:hover:bg-blue-700 focus:outline-none dark:focus:ring-blue-800 mt-10 flex gap-2">
-        <svg class="w-5 h-5 text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24"
-          fill="none" viewBox="0 0 24 24">
-          <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-            d="M5 12h14m-7 7V5" />
-        </svg>Tambah
-        Tugas
-      </button>
+      <a href="create.php">
+        <button type="button"
+          class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 me-2 mb-2 dark:bg-blue-600 dark:hover:bg-blue-700 focus:outline-none dark:focus:ring-blue-800 mt-10 flex gap-2">
+          <svg class="w-5 h-5 text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+            fill="none" viewBox="0 0 24 24">
+            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+              d="M5 12h14m-7 7V5" />
+          </svg>Tambah
+          Tugas
+        </button>
+      </a>
       <hr class="h-px my-8 bg-gray-200 border-0 dark:bg-gray-700">
       <div class="daftarCard grid grid-cols-4 gap-5">
         <div

@@ -16,12 +16,12 @@ $connectionOptions = [
 $conn = sqlsrv_connect($serverName, $connectionOptions);
 
 // Check the connection
-if ($conn) {
-    echo "Connection established successfully.";
-} else {
-    echo "Connection failed.";
-    die(print_r(sqlsrv_errors(), true));
-}
+// if ($conn) {
+//     echo "Connection established successfully.";
+// } else {
+//     echo "Connection failed.";
+//     die(print_r(sqlsrv_errors(), true));
+// }
 
 // Close the connection
 sqlsrv_close($conn);

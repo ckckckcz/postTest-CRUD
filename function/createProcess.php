@@ -1,5 +1,6 @@
 <?php
-include './routes/database.php';
+
+include './config/database.php';
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $judul = $_POST['judul'];

@@ -1,6 +1,6 @@
 <?php
 
-include './routes/database.php';
+include './config/database.php';
 
 if (isset($_GET['id'])) {
     $id = intval($_GET['id']);

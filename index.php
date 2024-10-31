@@ -1,5 +1,5 @@
 <?php
-include './routes/database.php';
+include './config/database.php';
 
 // Ambil data dari database
 $sql = "SELECT * FROM todos";

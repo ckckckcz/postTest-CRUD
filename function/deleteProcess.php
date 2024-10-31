@@ -1,5 +1,6 @@
 <?php
-include '../routes/database.php';
+
+include '../config/database.php';
 
 if (isset($_POST['id'])) {
     $id = htmlspecialchars($_POST['id']);

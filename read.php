@@ -1,6 +1,6 @@
 <?php
-include './function/readProcess.php'
-    ?>
+include './function/readProcess.php';
+?>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -16,11 +16,14 @@ include './function/readProcess.php'
     <div class="py-8 px-4 mx-auto max-w-screen-xl text-left lg:py-16">
         <h1
             class="mb-2 text-3xl font-bold leading-none tracking-tight text-gray-900 md:text-4xl lg:text-5xl dark:text-white">
-            Tugas Anda: Langkah Menuju Kesuksesan</h1>
-        <p class="text-md font-normal text-gray-500 lg:text-lg dark:text-gray-400">Setiap langkah kecil berkontribusi
-            terhadap pencapaian besar. Mari kita lihat apa yang perlu dilakukan untuk membuat hari ini lebih produktif!
+            Tugas Anda: Langkah Menuju Kesuksesan
+        </h1>
+        <p class="text-md font-normal text-gray-500 lg:text-lg dark:text-gray-400">
+            Setiap langkah kecil berkontribusi terhadap pencapaian besar. Mari kita lihat apa yang perlu dilakukan untuk
+            membuat hari ini lebih produktif!
         </p>
         <hr class="h-px my-8 bg-gray-200 border-0 dark:bg-gray-700">
+
         <form action="create.php" method="POST" class="text-lg">
             <div class="mb-5">
                 <label for="judul" class="block mb-2 font-medium text-gray-900 dark:text-white">Judul</label>
@@ -37,19 +40,23 @@ include './function/readProcess.php'
                     disabled></textarea>
             </div>
         </form>
-        <div class="listButton">
-            <a href="index.php"
-                class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 me-2 mb-2 dark:bg-blue-600 dark:hover:bg-blue-700 focus:outline-none dark:focus:ring-blue-800">
-                Kembali
-            </a>
-            <a href="edit.php"
-                class="text-white bg-green-700 hover:bg-green-800 focus:ring-4 focus:ring-green-300 font-medium rounded-lg text-sm px-5 py-2.5 me-2 mb-2 dark:bg-green-600 dark:hover:bg-green-700 focus:outline-none dark:focus:ring-green-800">
-                Edit
-            </a>
-            <a href="delete.php"
-                class="text-white bg-red-700 hover:bg-red-800 focus:ring-4 focus:ring-red-300 font-medium rounded-lg text-sm px-5 py-2.5 me-2 mb-2 dark:bg-red-600 dark:hover:bg-red-700 focus:outline-none dark:focus:ring-red-800">
-                Hapus
-            </a>
+
+        <div class="listButton flex">
+            <form action="./function/deleteProcess.php" method="POST">
+                <a href="index.php"
+                    class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 me-2 mb-2 dark:bg-blue-600 dark:hover:bg-blue-700 focus:outline-none dark:focus:ring-blue-800">
+                    Kembali
+                </a>
+                <a href="edit.php"
+                    class="text-white bg-green-700 hover:bg-green-800 focus:ring-4 focus:ring-green-300 font-medium rounded-lg text-sm px-5 py-2.5 me-2 mb-2 dark:bg-green-600 dark:hover:bg-green-700 focus:outline-none dark:focus:ring-green-800">
+                    Edit
+                </a>
+                <button type="submit"
+                    class="text-white bg-red-700 hover:bg-red-800 focus:ring-4 focus:ring-red-300 font-medium rounded-lg text-sm px-5 py-2.5 me-2 mb-2 dark:bg-red-600 dark:hover:bg-red-700 focus:outline-none dark:focus:ring-red-800">
+                    Hapus
+                </button>
+                <input type="text" class="hidden" name="id" value="<?php echo htmlspecialchars($row['id']); ?>" />
+            </form>
         </div>
     </div>
 </body>

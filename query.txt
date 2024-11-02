@@ -1,8 +1,0 @@
-use phpcrud;
-
-CREATE TABLE barangs (
-id INT NOT NULL IDENTITY(1,1) PRIMARY KEY,
-nama VARCHAR(20) NOT NULL,
-deskripsi TEXT,
-harga DECIMAL NOT NULL,
-created_at DATETIME DEFAULT GETDATE());

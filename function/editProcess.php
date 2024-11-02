@@ -1,13 +1,13 @@
 <?php
 include '../config/database.php';
 
-// Periksa apakah ID ada di URL dan valid
+// Syntax untuk memeriksa ID apakah ada / tidak ada
 if (isset($_GET['id']) && is_numeric($_GET['id'])) {
     $id = intval($_GET['id']);
 
-    // Jika form disubmit (metode POST), proses update data
+    // Jadi guys ini adalah proses update data
     if ($_SERVER['REQUEST_METHOD'] === 'POST') {
-        // Ambil data dari input form
+        // Proses pengambilan data dari inputan
         $judul = $_POST['judul'];
         $deskripsi = $_POST['deskripsi'];
 
@@ -20,11 +20,13 @@ if (isset($_GET['id']) && is_numeric($_GET['id'])) {
         if ($updateStmt === false) {
             die(print_r(sqlsrv_errors(), true));
         } else {
-            // Redirect ke halaman ../index.php setelah berhasil update
+            // Jika update data berhasil langsung diarahkan ke index.php
             header("Location: ../index.php");
             exit();
         }
     }
+
+    // Dimulai Dari Sini adalah pengambilan data dari database untuk ditampilkan pada inputan form
 
     // Query untuk mendapatkan data berdasarkan ID
     $query = "SELECT * FROM todos WHERE id = ?";
@@ -38,9 +40,9 @@ if (isset($_GET['id']) && is_numeric($_GET['id'])) {
 
     // Ambil data untuk ditampilkan di form
     if ($row = sqlsrv_fetch_array($stmt, SQLSRV_FETCH_ASSOC)) {
-        // Data ditemukan, $row berisi data yang akan ditampilkan
+        // Jika data ditemukan, $row berisi data yang akan ditampilkan
     } else {
-        // Jika data tidak ditemukan, tampilkan pesan error
+        // Kondisi jika data tidak ditemukan, tampilkan pesan error
         echo "
             <head>
                 <title>Tugas tidak ditemukan!</title>

@@ -3,18 +3,24 @@
 include '../config/database.php';
 
 if (isset($_GET['id'])) {
+    // Memeriksa parameter 'id' dikirim melalui metode GET
     $id = intval($_GET['id']);
 
+    // Siap-siap query SQL untuk mengambil data dari tabel 'todos' berdasarkan 'id'
     $query = "SELECT * FROM todos WHERE id = ?";
     $params = array($id);
 
+    // Menjalankan query SQL dengan koneksi ($conn), query ($query), dan parameter ($params).
     $stmt = sqlsrv_query($conn, $query, $params);
 
     if ($stmt === false) {
+        // Jika terjadi kesalahan saat menjalankan query, tampilkan detail kesalahan
         die(print_r(sqlsrv_errors(), true));
     }
 
     if ($row = sqlsrv_fetch_array($stmt, SQLSRV_FETCH_ASSOC)) {
+        // nah pada if ini kenapa kosong ??, jadi karena gunanya cuman menampilkan data dari tabel, jadi cuman butuh pengecekkan ID jika ID nya ditemukan
+        // ya data pada ID itu ditampilkan pada inputan form.... cuman gitu aja sihhh
     } else {
         echo "
             <head>
@@ -38,8 +44,10 @@ if (isset($_GET['id'])) {
             </body>
         ";
         exit();
+        // Jika data dengan 'id' tersebut tidak ditemukan, tampilkan pesan bahwa data tidak ditemukan
     }
 } else {
     header("Location: ../not_found_route.php");
     exit();
 }
+

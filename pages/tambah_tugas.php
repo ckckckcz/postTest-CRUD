@@ -21,7 +21,7 @@ include '../function/createProcess.php';
             <p class="text-md font-normal text-gray-500 lg:text-lg dark:text-gray-400">Setiap tugas yang Anda tulis
                 adalah langkah menuju kesuksesan!</p>
             <hr class="h-px my-8 bg-gray-200 border-0 dark:bg-gray-700">
-            <form action="create.php" method="POST" class="text-lg">
+            <form action="../function/createProcess.php" method="POST" class="text-lg">
                 <div class="mb-5">
                     <label for="judul" class="block mb-2 font-medium text-gray-900 dark:text-white">Judul</label>
                     <input type="text" id="judul" name="judul" placeholder="Masukkan Judul" required

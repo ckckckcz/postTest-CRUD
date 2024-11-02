@@ -1,5 +1,4 @@
 <?php
-
 include '../config/database.php';
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
@@ -12,13 +11,14 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $stmt = sqlsrv_query($conn, $sql, $params);
 
     if ($stmt) {
-        // Jika berhasil, arahkan ke halaman index.php
-        header("Location: index.php");
+        header("Location: ../index.php");
         exit();
     } else {
+        // Tampilkan pesan kesalahan jika terjadi error
         echo "Terjadi kesalahan: " . print_r(sqlsrv_errors(), true);
     }
 
+    // Membersihkan resource
     sqlsrv_free_stmt($stmt);
     sqlsrv_close($conn);
 }

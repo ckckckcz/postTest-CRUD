@@ -1,7 +1,7 @@
 <?php
 
-// $serverName = "RIOVALDOALFIYAN\MSQLRIO";
-$serverName = "LAPTOP-V9Q55RPI";
+$serverName = "RIOVALDOALFIYAN\MSQLRIO";
+// $serverName = "LAPTOP-V9Q55RPI";
 $connectionInfo = [
     "Database" => "crud"
 ];

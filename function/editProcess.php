@@ -6,7 +6,7 @@ if (isset($_GET['id']) && is_numeric($_GET['id'])) {
     $id = intval($_GET['id']);
 
     // Jadi guys ini adalah proses update data
-    if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+    if ($_SERVER['REQUEST_METHOD'] === 'POST') { // bandingkan dua nilai sekaligus memperhatikan tipe data
         // Proses pengambilan data dari inputan
         $judul = $_POST['judul'];
         $deskripsi = $_POST['deskripsi'];

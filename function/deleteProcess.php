@@ -2,7 +2,7 @@
 
 include '../config/database.php';
 
-if (isset($_POST['id'])) {
+if (isset($_POST['id'])) { // memeriksa keberadaaan variabel
     // Memeriksa apakah parameter 'id' yang dikirm dari metode POST du lihat_detail.php
     $id = htmlspecialchars($_POST['id']);
 
@@ -14,7 +14,7 @@ if (isset($_POST['id'])) {
     $sql = sqlsrv_query($conn, $query, $params);
 
     if ($sql) {
-        // Jika penghapusan berhasil, arahkan pengguna ke halaman index.php
+        // Jika penghapusan berhasil, arahkan pengguna ke halaman index.php, redirect
         header("Location: ../index.php");
         exit();
     } else {

@@ -4,7 +4,7 @@ include '../config/database.php';
 
 if (isset($_GET['id'])) {
     // Memeriksa parameter 'id' dikirim melalui metode GET
-    $id = intval($_GET['id']);
+    $id = intval($_GET['id']); // konversi nilai menjadi bilangan bulat (int)
 
     // Siap-siap query SQL untuk mengambil data dari tabel 'todos' berdasarkan 'id'
     $query = "SELECT * FROM todos WHERE id = ?";

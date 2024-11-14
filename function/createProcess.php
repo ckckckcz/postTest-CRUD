@@ -1,7 +1,7 @@
 <?php
 include '../config/database.php';
 
-if ($_SERVER["REQUEST_METHOD"] == "POST") {
+if ($_SERVER["REQUEST_METHOD"] == "POST") { // bandingkan dua nilai tanpa memperhatikan tipe data
     // Ini proses pengambilan data pada inputan form
     $judul = $_POST['judul'];
     $deskripsi = $_POST['deskripsi'];
